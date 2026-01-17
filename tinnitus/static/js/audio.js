@@ -173,61 +173,74 @@ function clear(){
   }
 }
 
-function open_lib(){
-  
-  if (document.getElementById("sel1").innerHTML === '♫') {
-    document.getElementById("q_sec").style.visibility= 'collapse';
-    document.getElementById("f_sec").style.visibility = 'collapse';
-    document.getElementById("frequency_label").style.visibility = 'collapse';
-    document.getElementById("player_label").style.visibility= 'collapse';
-    document.getElementById("SD_table").style.visibility = 'visible';
-    document.getElementById("sel1").innerHTML = '☰'
+function close_all(){
+  document.getElementById("q_sec").style.visibility= 'collapse';
+  document.getElementById("f_sec").style.visibility = 'collapse';
+  document.getElementById("frequency_label").style.visibility = 'collapse';
+  document.getElementById("player_label").style.visibility= 'collapse';
+  document.getElementById("SD_table").style.visibility= 'collapse';
+  document.getElementById("N_table").style.visibility= 'collapse';
+  document.getElementById("TT_table").style.visibility= 'collapse';
+  document.getElementById("GI_table").style.visibility= 'collapse';
+  document.getElementById("home_label").style.visibility= 'collapse';
+  document.getElementById("h_sec").style.visibility= 'collapse';
+  document.getElementById("SD_text").style.visibility= 'collapse';
+  document.getElementById("N_text").style.visibility= 'collapse';
+  document.getElementById("TT_text").style.visibility= 'collapse';
+  document.getElementById("GI_text").style.visibility= 'collapse';
+  document.getElementById("to_SD").style.visibility = 'collapse'
+  document.getElementById("to_N").style.visibility = 'collapse'
+  document.getElementById("to_TT").style.visibility = 'collapse'
+  document.getElementById("to_GI").style.visibility = 'collapse'}
 
-  } else if (document.getElementById("sel1").innerHTML === '☰'){
-    document.getElementById("SD_table").style.visibility= 'collapse';
-    document.getElementById("N_table").style.visibility= 'collapse';
-    document.getElementById("TT_table").style.visibility= 'collapse';
-    document.getElementById("GI_table").style.visibility= 'collapse';
-    document.getElementById("f_sec").style.visibility = 'collapse';
-    document.getElementById("frequency_label").style.visibility = 'collapse';
-    document.getElementById("player_label").style.visibility= 'visible';
-    document.getElementById("q_sec").style.visibility = 'visible';
-    document.getElementById("sel1").innerHTML = '♫'
-  }
+function open_home(){
+  close_all();
+  document.getElementById("home_label").style.visibility= 'visible';
+  document.getElementById("h_sec").style.visibility= 'visible';
+  document.getElementById("SD_text").style.visibility= 'visible';
+  document.getElementById("to_N").style.visibility = 'visible'}
+
+function open_player(){
+  close_all();
+  document.getElementById("player_label").style.visibility= 'visible';
+  document.getElementById("q_sec").style.visibility= 'visible';
+}
+
+function open_lib(){
+  close_all();
+  document.getElementById("SD_table").style.visibility= 'visible';
 }
 
 function open_freq(){
+  close_all();
   document.getElementById("f_sec").style.visibility = 'visible';
+  document.getElementById("frequency_label").style.visibility = 'visible';
+}
 
-  if (document.getElementById("sel2").innerHTML === 'Hz') {
-    document.getElementById("SD_table").style.visibility= 'collapse';
-    document.getElementById("N_table").style.visibility= 'collapse';
-    document.getElementById("TT_table").style.visibility= 'collapse';
-    document.getElementById("GI_table").style.visibility= 'collapse';
-    document.getElementById("q_sec").style.visibility= 'collapse';
-    document.getElementById("player_label").style.visibility= 'collapse';
-    document.getElementById("f_sec").style.visibility = 'visible';
-    document.getElementById("frequency_label").style.visibility = 'visible';
+function to_N(){
+  document.getElementById("N_text").style.visibility = 'visible';
+  document.getElementById("SD_text").style.visibility = 'collapse';
+  document.getElementById("to_N").style.visibility = 'collapse';
+  document.getElementById("to_TT").style.visibility = 'visible';
+}
 
-    if (document.getElementById("sel1").innerHTML === '♫'){
-      document.getElementById("sel1").innerHTML = '☰';
-      document.getElementById("sel2").innerHTML = '♫'; 
-    }
+function to_TT(){
+  document.getElementById("TT_text").style.visibility = 'visible';
+  document.getElementById("N_text").style.visibility = 'collapse';
+  document.getElementById("to_TT").style.visibility = 'collapse';
+  document.getElementById("to_GI").style.visibility = 'visible';
+}
 
-    if (document.getElementById("sel1").innerHTML === '☰'){
-      document.getElementById("sel1").innerHTML = '☰';
-      document.getElementById("sel2").innerHTML = '♫'; 
-    }
-  } else if (document.getElementById("sel2").innerHTML === '♫'){
-    document.getElementById("SD_table").style.visibility= 'visible';
-    document.getElementById("player_label").style.visibility= 'collapse';
-    document.getElementById("N_table").style.visibility= 'collapse';
-    document.getElementById("TT_table").style.visibility= 'collapse';
-    document.getElementById("GI_table").style.visibility= 'collapse';
-    document.getElementById("f_sec").style.visibility = 'collapse';
-    document.getElementById("frequency_label").style.visibility = 'collapse';
-    document.getElementById("q_sec").style.visibility = 'collapse';
-    document.getElementById("sel2").innerHTML = 'Hz';
-    document.getElementById("sel1").innerHTML = '☰';
-  }
+function to_GI(){
+  document.getElementById("GI_text").style.visibility = 'visible';
+  document.getElementById("TT_text").style.visibility = 'collapse';
+  document.getElementById("to_GI").style.visibility = 'collapse';
+  document.getElementById("to_SD").style.visibility = 'visible';
+}
+
+function to_SD(){
+  document.getElementById("SD_text").style.visibility = 'visible';
+  document.getElementById("GI_text").style.visibility = 'collapse';
+  document.getElementById("to_SD").style.visibility = 'collapse';
+  document.getElementById("to_N").style.visibility = 'visible';
 }
