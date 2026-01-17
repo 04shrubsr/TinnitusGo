@@ -109,39 +109,48 @@ body {
 
   #SD_text {
       position : fixed;
-      visibility: visible;}
+      visibility: visible;
+      overflow: scroll;}
 
   #SD_text2 {
       position : fixed;
-      visibility: collapse;}
+      visibility: collapse;
+      overflow: scroll;}
 
   #N_text {
       position : fixed;
-      visibility: collapse;}
+      visibility: collapse;
+      overflow: scroll;}
   
   #N_text2 {
       position : fixed;
-      visibility: collapse;}
+      visibility: collapse;
+      overflow: scroll;}
 
   #TT_text {
     position : fixed;
-    visibility: collapse;}
+    visibility: collapse;
+    overflow: scroll;}
 
   #TT_text2 {
     position : fixed;
-    visibility: collapse;}
+    visibility: collapse;
+    overflow: scroll;}
 
   #TT_text3 {
     position : fixed;
-    visibility: collapse;}
+    visibility: collapse;
+    overflow: scroll;}
 
   #GI_text {
     position : fixed;
-    visibility: collapse;}
+    visibility: collapse;
+    overflow: scroll;}
 
   #GI_text2 {
     position : fixed;
-    visibility: collapse;}
+    visibility: collapse;
+    overflow: scroll;}
 
 .song_table {
   background-color: #15181a;
